@@ -12,13 +12,11 @@ import MapKit
 
 struct HomeView: View {
     var viewModel = HomeViewModel()
-    @State var searchText: String = ""
     @State var region = MKCoordinateRegion(center: .init(latitude: 37.334722, longitude: -122.008889), latitudinalMeters: 300, longitudinalMeters: 300)
-        
+    
     var body: some View {
         NavigationView{
             VStack(alignment: .leading, spacing: 8){
-                SearchBar(text: $searchText)
                 Text("Selecione uma Categoria")
                     .padding(.leading)
                     .font(.system(size: 25))

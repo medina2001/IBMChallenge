@@ -30,4 +30,8 @@ extension HomeViewModel {
         ]
         return categories
     }
+    
+//    func getProducts() -> {
+//        
+//    }
 }
