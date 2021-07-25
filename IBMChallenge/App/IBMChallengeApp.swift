@@ -12,7 +12,7 @@ struct IBMChallengeApp: App {
 
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            HomeView()
         }
     }
 }

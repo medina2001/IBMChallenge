@@ -7,8 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7200BC5026AD504900E592D8 /* SearchBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7200BC4F26AD504900E592D8 /* SearchBar.swift */; };
+		7200BC5226AD5BDA00E592D8 /* CircularCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7200BC5126AD5BDA00E592D8 /* CircularCard.swift */; };
+		7200BC5526AD616C00E592D8 /* CategoryModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7200BC5426AD616C00E592D8 /* CategoryModel.swift */; };
+		7200BC5726AD63DA00E592D8 /* HScroll.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7200BC5626AD63DA00E592D8 /* HScroll.swift */; };
+		7200BC5A26AD696D00E592D8 /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7200BC5926AD696D00E592D8 /* HomeViewModel.swift */; };
 		7206EDD326AD36C30039FFBC /* IBMChallengeApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7206EDD226AD36C30039FFBC /* IBMChallengeApp.swift */; };
-		7206EDD526AD36C30039FFBC /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7206EDD426AD36C30039FFBC /* ContentView.swift */; };
+		7206EDD526AD36C30039FFBC /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7206EDD426AD36C30039FFBC /* HomeView.swift */; };
 		7206EDD726AD36C50039FFBC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7206EDD626AD36C50039FFBC /* Assets.xcassets */; };
 		7206EDDA26AD36C50039FFBC /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7206EDD926AD36C50039FFBC /* Preview Assets.xcassets */; };
 		7206EDDC26AD36C50039FFBC /* Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7206EDDB26AD36C50039FFBC /* Persistence.swift */; };
@@ -35,9 +40,14 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		7200BC4F26AD504900E592D8 /* SearchBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchBar.swift; sourceTree = "<group>"; };
+		7200BC5126AD5BDA00E592D8 /* CircularCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircularCard.swift; sourceTree = "<group>"; };
+		7200BC5426AD616C00E592D8 /* CategoryModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryModel.swift; sourceTree = "<group>"; };
+		7200BC5626AD63DA00E592D8 /* HScroll.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HScroll.swift; sourceTree = "<group>"; };
+		7200BC5926AD696D00E592D8 /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
 		7206EDCF26AD36C30039FFBC /* IBMChallenge.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = IBMChallenge.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7206EDD226AD36C30039FFBC /* IBMChallengeApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IBMChallengeApp.swift; sourceTree = "<group>"; };
-		7206EDD426AD36C30039FFBC /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		7206EDD426AD36C30039FFBC /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		7206EDD626AD36C50039FFBC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		7206EDD926AD36C50039FFBC /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		7206EDDB26AD36C50039FFBC /* Persistence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Persistence.swift; sourceTree = "<group>"; };
@@ -76,6 +86,40 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		7200BC4D26AD500E00E592D8 /* Shared */ = {
+			isa = PBXGroup;
+			children = (
+				7200BC4E26AD503700E592D8 /* Views */,
+			);
+			path = Shared;
+			sourceTree = "<group>";
+		};
+		7200BC4E26AD503700E592D8 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				7200BC4F26AD504900E592D8 /* SearchBar.swift */,
+				7200BC5126AD5BDA00E592D8 /* CircularCard.swift */,
+				7200BC5626AD63DA00E592D8 /* HScroll.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		7200BC5326AD614700E592D8 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				7200BC5426AD616C00E592D8 /* CategoryModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		7200BC5826AD695A00E592D8 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				7200BC5926AD696D00E592D8 /* HomeViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
 		7206EDC626AD36C30039FFBC = {
 			isa = PBXGroup;
 			children = (
@@ -101,6 +145,7 @@
 			children = (
 				720D0EA326AD38CF0020CA09 /* App */,
 				720D0EA826AD3A280020CA09 /* Data */,
+				7200BC4D26AD500E00E592D8 /* Shared */,
 				720D0EA426AD38F30020CA09 /* Scenes */,
 				720D0EA726AD39700020CA09 /* Resources */,
 				7206EDDD26AD36C50039FFBC /* IBMChallenge.xcdatamodeld */,
@@ -155,6 +200,8 @@
 		720D0EA526AD394E0020CA09 /* Home */ = {
 			isa = PBXGroup;
 			children = (
+				7200BC5826AD695A00E592D8 /* ViewModel */,
+				7200BC5326AD614700E592D8 /* Model */,
 				720D0EA626AD39560020CA09 /* View */,
 			);
 			path = Home;
@@ -163,7 +210,7 @@
 		720D0EA626AD39560020CA09 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				7206EDD426AD36C30039FFBC /* ContentView.swift */,
+				7206EDD426AD36C30039FFBC /* HomeView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -321,10 +368,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7200BC5226AD5BDA00E592D8 /* CircularCard.swift in Sources */,
+				7200BC5A26AD696D00E592D8 /* HomeViewModel.swift in Sources */,
 				7206EDDF26AD36C50039FFBC /* IBMChallenge.xcdatamodeld in Sources */,
 				7206EDDC26AD36C50039FFBC /* Persistence.swift in Sources */,
-				7206EDD526AD36C30039FFBC /* ContentView.swift in Sources */,
+				7200BC5526AD616C00E592D8 /* CategoryModel.swift in Sources */,
+				7200BC5026AD504900E592D8 /* SearchBar.swift in Sources */,
+				7206EDD526AD36C30039FFBC /* HomeView.swift in Sources */,
 				7206EDD326AD36C30039FFBC /* IBMChallengeApp.swift in Sources */,
+				7200BC5726AD63DA00E592D8 /* HScroll.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
