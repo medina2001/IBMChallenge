@@ -18,6 +18,7 @@
 		7200BC6826ADB6F200E592D8 /* SearchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7200BC6726ADB6F200E592D8 /* SearchView.swift */; };
 		7200BC6A26ADBC4800E592D8 /* ProductView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7200BC6926ADBC4800E592D8 /* ProductView.swift */; };
 		7200BC6F26ADD52300E592D8 /* SearchViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7200BC6E26ADD52300E592D8 /* SearchViewModel.swift */; };
+		7200BC7126AE253300E592D8 /* CustomList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7200BC7026AE253200E592D8 /* CustomList.swift */; };
 		7206EDD326AD36C30039FFBC /* IBMChallengeApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7206EDD226AD36C30039FFBC /* IBMChallengeApp.swift */; };
 		7206EDD526AD36C30039FFBC /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7206EDD426AD36C30039FFBC /* HomeView.swift */; };
 		7206EDD726AD36C50039FFBC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7206EDD626AD36C50039FFBC /* Assets.xcassets */; };
@@ -57,6 +58,7 @@
 		7200BC6726ADB6F200E592D8 /* SearchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchView.swift; sourceTree = "<group>"; };
 		7200BC6926ADBC4800E592D8 /* ProductView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductView.swift; sourceTree = "<group>"; };
 		7200BC6E26ADD52300E592D8 /* SearchViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewModel.swift; sourceTree = "<group>"; };
+		7200BC7026AE253200E592D8 /* CustomList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomList.swift; sourceTree = "<group>"; };
 		7206EDCF26AD36C30039FFBC /* IBMChallenge.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = IBMChallenge.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7206EDD226AD36C30039FFBC /* IBMChallengeApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IBMChallengeApp.swift; sourceTree = "<group>"; };
 		7206EDD426AD36C30039FFBC /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
@@ -113,6 +115,7 @@
 				7200BC5126AD5BDA00E592D8 /* CircularCard.swift */,
 				7200BC5626AD63DA00E592D8 /* HScroll.swift */,
 				7200BC5B26AD741600E592D8 /* CustomCell.swift */,
+				7200BC7026AE253200E592D8 /* CustomList.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -436,6 +439,7 @@
 			files = (
 				7200BC5226AD5BDA00E592D8 /* CircularCard.swift in Sources */,
 				7200BC6326ADB61F00E592D8 /* MainView.swift in Sources */,
+				7200BC7126AE253300E592D8 /* CustomList.swift in Sources */,
 				7200BC5A26AD696D00E592D8 /* HomeViewModel.swift in Sources */,
 				7200BC5C26AD741600E592D8 /* CustomCell.swift in Sources */,
 				7200BC6A26ADBC4800E592D8 /* ProductView.swift in Sources */,
@@ -618,7 +622,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.Gabriel.IBMChallenge;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -640,7 +644,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.Gabriel.IBMChallenge;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};

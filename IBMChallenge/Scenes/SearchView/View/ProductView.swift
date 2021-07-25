@@ -8,12 +8,11 @@
 import SwiftUI
 
 struct ProductView<Content> : View where Content : View {
-    var title: Text
-    var image: String
+    var item: ProductModel
     @ViewBuilder var content: () -> Content
     var body: some View {
         HStack{
-            Image(image)
+            Image("product")
                 .resizable()
                 .frame(width: 50, height: 50, alignment: .center)
                 .padding(EdgeInsets(top: 10, leading: 20, bottom: 10, trailing: 20))
@@ -23,8 +22,9 @@ struct ProductView<Content> : View where Content : View {
             
             
             VStack(alignment: .leading, spacing: 8) {
-                title
+                Text(item.name)
                 Divider().background(Color.gray)
+                Text(item.description)
                 content()
             }.frame(minWidth: 0, maxWidth: .infinity, alignment: .topLeading)
             
@@ -34,10 +34,10 @@ struct ProductView<Content> : View where Content : View {
     }
 }
 
-struct ProductView_Previews: PreviewProvider {
-    static var previews: some View {
-        ProductView(title: Text("Título"), image: "product") {
-            Text("Arroz top")
-        }
-    }
-}
+//struct ProductView_Previews: PreviewProvider {
+//    static var previews: some View {
+//        ProductView(title: Text("Título"), image: "product") {
+//            Text("Arroz top")
+//        }
+//    }
+//}
