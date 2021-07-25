@@ -12,6 +12,7 @@
 		7200BC5526AD616C00E592D8 /* CategoryModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7200BC5426AD616C00E592D8 /* CategoryModel.swift */; };
 		7200BC5726AD63DA00E592D8 /* HScroll.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7200BC5626AD63DA00E592D8 /* HScroll.swift */; };
 		7200BC5A26AD696D00E592D8 /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7200BC5926AD696D00E592D8 /* HomeViewModel.swift */; };
+		7200BC5C26AD741600E592D8 /* CustomCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7200BC5B26AD741600E592D8 /* CustomCell.swift */; };
 		7206EDD326AD36C30039FFBC /* IBMChallengeApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7206EDD226AD36C30039FFBC /* IBMChallengeApp.swift */; };
 		7206EDD526AD36C30039FFBC /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7206EDD426AD36C30039FFBC /* HomeView.swift */; };
 		7206EDD726AD36C50039FFBC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7206EDD626AD36C50039FFBC /* Assets.xcassets */; };
@@ -45,6 +46,7 @@
 		7200BC5426AD616C00E592D8 /* CategoryModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryModel.swift; sourceTree = "<group>"; };
 		7200BC5626AD63DA00E592D8 /* HScroll.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HScroll.swift; sourceTree = "<group>"; };
 		7200BC5926AD696D00E592D8 /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
+		7200BC5B26AD741600E592D8 /* CustomCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomCell.swift; sourceTree = "<group>"; };
 		7206EDCF26AD36C30039FFBC /* IBMChallenge.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = IBMChallenge.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7206EDD226AD36C30039FFBC /* IBMChallengeApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IBMChallengeApp.swift; sourceTree = "<group>"; };
 		7206EDD426AD36C30039FFBC /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
@@ -100,6 +102,7 @@
 				7200BC4F26AD504900E592D8 /* SearchBar.swift */,
 				7200BC5126AD5BDA00E592D8 /* CircularCard.swift */,
 				7200BC5626AD63DA00E592D8 /* HScroll.swift */,
+				7200BC5B26AD741600E592D8 /* CustomCell.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -370,6 +373,7 @@
 			files = (
 				7200BC5226AD5BDA00E592D8 /* CircularCard.swift in Sources */,
 				7200BC5A26AD696D00E592D8 /* HomeViewModel.swift in Sources */,
+				7200BC5C26AD741600E592D8 /* CustomCell.swift in Sources */,
 				7206EDDF26AD36C50039FFBC /* IBMChallenge.xcdatamodeld in Sources */,
 				7206EDDC26AD36C50039FFBC /* Persistence.swift in Sources */,
 				7200BC5526AD616C00E592D8 /* CategoryModel.swift in Sources */,

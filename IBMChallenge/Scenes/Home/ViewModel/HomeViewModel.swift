@@ -19,13 +19,13 @@ extension HomeViewModel {
                      image: "circle.fill",
                      id: "0"),
             CategoryModel(name: "Cosméticos",
-                     image: "circle.fill",
+                     image: "circle",
                      id: "1"),
             CategoryModel(name: "Cosméticos",
-                     image: "circle.fill",
+                     image: "square.fill",
                      id: "2"),
             CategoryModel(name: "Cosméticos",
-                     image: "circle.fill",
+                     image: "square",
                      id: "3")
         ]
         return categories

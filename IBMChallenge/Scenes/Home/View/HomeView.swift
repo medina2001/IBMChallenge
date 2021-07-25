@@ -7,27 +7,37 @@
 
 import SwiftUI
 import CoreData
+import MapKit
+
 
 struct HomeView: View {
     var viewModel = HomeViewModel()
     @State var searchText: String = ""
-    
+    @State var region = MKCoordinateRegion(center: .init(latitude: 37.334722, longitude: -122.008889), latitudinalMeters: 300, longitudinalMeters: 300)
+        
     var body: some View {
-        VStack(alignment: .leading){
-            Text("Eco-Friendly")
-                .padding(.leading)
-                .font(.system(size: 40,weight: .black))
-            SearchBar(text: $searchText)
-            HScroll(data: viewModel.getCategories())
-            List(){
-                Section(header: Text("Selecione uma categoria")) {
-                    Text("Texto")
+        NavigationView{
+            VStack(alignment: .leading, spacing: 8){
+                SearchBar(text: $searchText)
+                Text("Selecione uma Categoria")
+                    .padding(.leading)
+                    .font(.system(size: 25))
+                HScroll(data: viewModel.getCategories())
+                CustomCell(title: Text("Encontrar Supermercados")) {
+                    Map(coordinateRegion: $region,
+                        interactionModes: .all,
+                        showsUserLocation: true,
+                        userTrackingMode: nil,
+                        annotationItems: [PinItem(coordinate: .init(latitude: 37.334722, longitude: -122.008889))]) { item in
+                        MapAnnotation(coordinate: item.coordinate, anchorPoint: CGPoint(x: 0.5, y: 0.5)) {
+                            Rectangle()
+                                .strokeBorder(Color.red, lineWidth: 5)
+                                .frame(width: 44, height: 44)
+                        }
+                    }
                 }
-
-                Section(header: Text("Achar Supermercado")) {
-                    Text("Hello World!!")
-                }
-            }.listStyle(GroupedListStyle())
+                Spacer()
+            }.navigationTitle("Eco-Friendly")
         }
     }
 }
@@ -38,4 +48,9 @@ struct ContentView_Previews: PreviewProvider {
             HomeView()
         }
     }
+}
+
+struct PinItem: Identifiable {
+    let id = UUID()
+    let coordinate: CLLocationCoordinate2D
 }

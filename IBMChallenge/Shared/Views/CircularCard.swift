@@ -13,6 +13,7 @@ struct CircularCard: View {
         VStack(spacing: 8){
             Image(systemName: item.image)
                 .frame(width: 80, height: 80, alignment: .center)
+                .background(Color.orange)
                 .clipShape(Circle())
                 .font(.largeTitle)
             Text(item.name)
