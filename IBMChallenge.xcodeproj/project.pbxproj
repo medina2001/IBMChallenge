@@ -99,11 +99,10 @@
 		7206EDD126AD36C30039FFBC /* IBMChallenge */ = {
 			isa = PBXGroup;
 			children = (
-				7206EDD226AD36C30039FFBC /* IBMChallengeApp.swift */,
-				7206EDD426AD36C30039FFBC /* ContentView.swift */,
-				7206EDD626AD36C50039FFBC /* Assets.xcassets */,
-				7206EDDB26AD36C50039FFBC /* Persistence.swift */,
-				7206EDE026AD36C50039FFBC /* Info.plist */,
+				720D0EA326AD38CF0020CA09 /* App */,
+				720D0EA826AD3A280020CA09 /* Data */,
+				720D0EA426AD38F30020CA09 /* Scenes */,
+				720D0EA726AD39700020CA09 /* Resources */,
 				7206EDDD26AD36C50039FFBC /* IBMChallenge.xcdatamodeld */,
 				7206EDD826AD36C50039FFBC /* Preview Content */,
 			);
@@ -134,6 +133,63 @@
 				7206EDF626AD36C60039FFBC /* Info.plist */,
 			);
 			path = IBMChallengeUITests;
+			sourceTree = "<group>";
+		};
+		720D0EA326AD38CF0020CA09 /* App */ = {
+			isa = PBXGroup;
+			children = (
+				7206EDD226AD36C30039FFBC /* IBMChallengeApp.swift */,
+				7206EDE026AD36C50039FFBC /* Info.plist */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		720D0EA426AD38F30020CA09 /* Scenes */ = {
+			isa = PBXGroup;
+			children = (
+				720D0EA526AD394E0020CA09 /* Home */,
+			);
+			path = Scenes;
+			sourceTree = "<group>";
+		};
+		720D0EA526AD394E0020CA09 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				720D0EA626AD39560020CA09 /* View */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		720D0EA626AD39560020CA09 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				7206EDD426AD36C30039FFBC /* ContentView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		720D0EA726AD39700020CA09 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				7206EDD626AD36C50039FFBC /* Assets.xcassets */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		720D0EA826AD3A280020CA09 /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				720D0EA926AD3AAD0020CA09 /* PersistentStorages */,
+			);
+			path = Data;
+			sourceTree = "<group>";
+		};
+		720D0EA926AD3AAD0020CA09 /* PersistentStorages */ = {
+			isa = PBXGroup;
+			children = (
+				7206EDDB26AD36C50039FFBC /* Persistence.swift */,
+			);
+			path = PersistentStorages;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -429,7 +485,7 @@
 				DEVELOPMENT_ASSET_PATHS = "\"IBMChallenge/Preview Content\"";
 				DEVELOPMENT_TEAM = TSL9RRYSR6;
 				ENABLE_PREVIEWS = YES;
-				INFOPLIST_FILE = IBMChallenge/Info.plist;
+				INFOPLIST_FILE = IBMChallenge/App/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -451,7 +507,7 @@
 				DEVELOPMENT_ASSET_PATHS = "\"IBMChallenge/Preview Content\"";
 				DEVELOPMENT_TEAM = TSL9RRYSR6;
 				ENABLE_PREVIEWS = YES;
-				INFOPLIST_FILE = IBMChallenge/Info.plist;
+				INFOPLIST_FILE = IBMChallenge/App/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
