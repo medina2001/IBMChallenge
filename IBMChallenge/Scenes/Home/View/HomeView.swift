@@ -33,8 +33,7 @@ struct HomeView: View {
                                 .frame(width: 44, height: 44)
                         }
                     }
-                }
-                Spacer()
+                }.padding(.bottom)
             }.navigationTitle("Eco-Friendly")
         }
     }

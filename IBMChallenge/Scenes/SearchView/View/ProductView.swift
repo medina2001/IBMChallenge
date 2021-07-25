@@ -12,12 +12,13 @@ struct ProductView<Content> : View where Content : View {
     var image: String
     @ViewBuilder var content: () -> Content
     var body: some View {
-        HStack(spacing: 8){
+        HStack{
             Image(systemName: image)
                 .frame(width: 50, height: 50, alignment: .center)
                 .background(Color.blue)
                 .clipShape(Circle())
                 .font(.largeTitle)
+                .padding(.leading, -5)
             VStack(alignment: .leading, spacing: 8) {
                 title
                 Divider().background(Color.gray)

@@ -12,10 +12,15 @@ struct SearchView: View {
     @State var searchText: String = ""
     
     var body: some View {
-        NavigationView{
-            VStack(alignment: .leading){
-                SearchBar(text: $searchText)
-                List(){
+        VStack(alignment: .leading){
+            SearchBar(text: $searchText)
+                .padding(.top)
+            Text("Produtos")
+                .padding(.leading)
+                .padding(.top, 5)
+                .font(.title2)
+            ScrollView(){
+                LazyVStack{
                     ProductView(title: Text("Arroz"), image: "square") {
                         Text("Descrição mt top do produto")
                     }
@@ -29,7 +34,7 @@ struct SearchView: View {
                         Text("Descrição mt top do produto")
                     }
                 }
-            }.navigationTitle("Title")
+            }
         }
     }
 }
