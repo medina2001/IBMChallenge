@@ -13,12 +13,15 @@ struct ProductView<Content> : View where Content : View {
     @ViewBuilder var content: () -> Content
     var body: some View {
         HStack{
-            Image(systemName: image)
+            Image(image)
+                .resizable()
                 .frame(width: 50, height: 50, alignment: .center)
+                .padding(EdgeInsets(top: 10, leading: 20, bottom: 10, trailing: 20))
                 .background(Color.blue)
                 .clipShape(Circle())
-                .font(.largeTitle)
                 .padding(.leading, -5)
+            
+            
             VStack(alignment: .leading, spacing: 8) {
                 title
                 Divider().background(Color.gray)
@@ -33,7 +36,7 @@ struct ProductView<Content> : View where Content : View {
 
 struct ProductView_Previews: PreviewProvider {
     static var previews: some View {
-        ProductView(title: Text("Arroz"), image: "circle") {
+        ProductView(title: Text("Título"), image: "product") {
             Text("Arroz top")
         }
     }

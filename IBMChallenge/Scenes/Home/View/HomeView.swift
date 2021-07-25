@@ -28,8 +28,8 @@ struct HomeView: View {
                         userTrackingMode: nil,
                         annotationItems: [PinItem(coordinate: .init(latitude: 37.334722, longitude: -122.008889))]) { item in
                         MapAnnotation(coordinate: item.coordinate, anchorPoint: CGPoint(x: 0.5, y: 0.5)) {
-                            Rectangle()
-                                .strokeBorder(Color.red, lineWidth: 5)
+                            Circle()
+                                .strokeBorder(Color.blue, lineWidth: 5)
                                 .frame(width: 44, height: 44)
                         }
                     }

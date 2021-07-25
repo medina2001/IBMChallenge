@@ -7,15 +7,12 @@
 
 import Foundation
 
-struct ProductModel: Hashable {
+struct ProductModel: Hashable, Identifiable {
     let name: String
     let description: String
-    let image: String
-    let barCode: String
-    let id: String
-}
-
-enum EcoFlag: String {
-    case quantity = "Quantity"
-    case duration = "Duration"
+    let is_vegan: Bool
+    let is_ecologic: Bool
+    let have_lactose: Bool
+    let have_gluten: Bool
+    let id: UUID
 }

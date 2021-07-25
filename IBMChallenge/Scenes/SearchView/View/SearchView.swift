@@ -21,16 +21,16 @@ struct SearchView: View {
                 .font(.title2)
             ScrollView(){
                 LazyVStack{
-                    ProductView(title: Text("Arroz"), image: "square") {
+                    ProductView(title: Text("Arroz"), image: "product") {
                         Text("Descrição mt top do produto")
                     }
-                    ProductView(title: Text("Arroz"), image: "circle.fill") {
+                    ProductView(title: Text("Arroz"), image: "product") {
                         Text("Descrição mt top do produto")
                     }
-                    ProductView(title: Text("Arroz"), image: "square.fill") {
+                    ProductView(title: Text("Arroz"), image: "product") {
                         Text("Descrição mt top do produto")
                     }
-                    ProductView(title: Text("Arroz"), image: "circle") {
+                    ProductView(title: Text("Arroz"), image: "product") {
                         Text("Descrição mt top do produto")
                     }
                 }

@@ -13,7 +13,6 @@ struct CustomCell<Content> : View where Content : View {
     var body: some View {
         VStack(alignment: .leading, spacing: 8) {
             title
-            Divider().background(Color.gray)
             content()
         }.frame(minWidth: 0, maxWidth: .infinity, alignment: .topLeading)
         .padding()

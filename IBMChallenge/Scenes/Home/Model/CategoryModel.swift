@@ -7,9 +7,9 @@
 
 import Foundation
 
-struct CategoryModel: Hashable {
+struct CategoryModel: Hashable, Identifiable {
     let name: String
     let image: String
-    let id: String
+    let id = UUID()
 }
 

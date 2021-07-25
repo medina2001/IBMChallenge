@@ -16,22 +16,15 @@ extension HomeViewModel {
     func getCategories() -> [CategoryModel] {
         categories = [
             CategoryModel(name: "Cosméticos",
-                     image: "circle.fill",
-                     id: "0"),
-            CategoryModel(name: "Cosméticos",
-                     image: "circle",
-                     id: "1"),
-            CategoryModel(name: "Cosméticos",
-                     image: "square.fill",
-                     id: "2"),
-            CategoryModel(name: "Cosméticos",
-                     image: "square",
-                     id: "3")
+                     image: "cosmetic"),
+            CategoryModel(name: "Alimentos",
+                     image: "food"),
+            CategoryModel(name: "Higiene",
+                     image: "hygiene"),
+            CategoryModel(name: "Limpeza",
+                     image: "cleaning")
         ]
         return categories
     }
     
-//    func getProducts() -> {
-//        
-//    }
 }
