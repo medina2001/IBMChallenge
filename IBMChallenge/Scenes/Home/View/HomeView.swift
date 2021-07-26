@@ -11,34 +11,45 @@ import MapKit
 
 
 struct HomeView: View {
+    @State private var region = MKCoordinateRegion(center: CLLocationCoordinate2D(latitude: 51.507222, longitude: -0.1275), span: MKCoordinateSpan(latitudeDelta: 10, longitudeDelta: 10))
+    
     var viewModel = HomeViewModel()
-    @State var region = MKCoordinateRegion(center: .init(latitude: 37.334722, longitude: -122.008889), latitudinalMeters: 300, longitudinalMeters: 300)
+    let mapLocations = [
+        MapPinModel(name: "Carrefour", latitude: 51.507222, longitude: -0.1275),
+        MapPinModel(name: "Nova Era", latitude: 48.8567, longitude: 2.3508),
+        MapPinModel(name: "Supermercado Bom e Bararo", latitude: 41.9, longitude: 12.5),
+        MapPinModel(name: "Supermercado Preço Bom", latitude: 38.895111, longitude: -77.036667)
+    ]
     
     var body: some View {
         NavigationView{
             VStack(alignment: .leading, spacing: 8){
-                Text("Selecione uma Categoria")
+                Text("Selecione uma categoria de produtos")
                     .padding(.leading)
-                    .font(.system(size: 25))
+                    .font(.system(size: 20))
                 NavigationLink(destination: SearchView()) {
-                HScroll(data: viewModel.getCategories())
+                    HScroll(data: viewModel.getCategories())
                 }
                 CustomCell(title: Text("Encontrar Supermercados")) {
-                    Map(coordinateRegion: $region,
-                        interactionModes: .all,
-                        showsUserLocation: true,
-                        userTrackingMode: nil,
-                        annotationItems: [PinItem(coordinate: .init(latitude: 37.334722, longitude: -122.008889))]) { item in
-                        MapAnnotation(coordinate: item.coordinate, anchorPoint: CGPoint(x: 0.5, y: 0.5)) {
-                            Circle()
-                                .strokeBorder(Color.blue, lineWidth: 5)
-                                .frame(width: 44, height: 44)
+                    Map(coordinateRegion: $region, annotationItems: mapLocations) { item in
+                        
+                        MapAnnotation(coordinate: item.coordinate) {
+                            NavigationLink(destination: SearchView()){
+                                VStack{
+                                    Image("mapPin")
+                                        .resizable()
+                                        .frame(width: 44, height: 44)
+                                        .clipShape(Circle())
+                                    Text(item.name)
+                                }
+                            }
                         }
                     }
                 }.padding(.bottom)
-            }.navigationTitle("Eco-Friendly")
+            }.navigationTitle("Eco Location")
         }
     }
+    
 }
 
 struct ContentView_Previews: PreviewProvider {
@@ -47,9 +58,4 @@ struct ContentView_Previews: PreviewProvider {
             HomeView()
         }
     }
-}
-
-struct PinItem: Identifiable {
-    let id = UUID()
-    let coordinate: CLLocationCoordinate2D
 }
