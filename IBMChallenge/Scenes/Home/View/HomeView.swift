@@ -20,7 +20,9 @@ struct HomeView: View {
                 Text("Selecione uma Categoria")
                     .padding(.leading)
                     .font(.system(size: 25))
+                NavigationLink(destination: SearchView()) {
                 HScroll(data: viewModel.getCategories())
+                }
                 CustomCell(title: Text("Encontrar Supermercados")) {
                     Map(coordinateRegion: $region,
                         interactionModes: .all,

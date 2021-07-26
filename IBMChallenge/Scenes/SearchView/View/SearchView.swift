@@ -8,17 +8,30 @@
 import SwiftUI
 
 struct SearchView: View {
+    @Environment(\.presentationMode) var presentationMode: Binding<PresentationMode>
     var viewModel = SearchViewModel()
     var body: some View {
         VStack(alignment: .leading){
-            Text("Produtos")
-                .padding(.leading)
-                .padding(.top, 5)
-                .font(.title2)
             CustomList(data: viewModel.getProducts())
-        }
+        }.navigationTitle("Produtos Disponíveis")
+        .navigationBarTitleDisplayMode(.inline)
+        .navigationBarBackButtonHidden(true)
+        .navigationBarItems(leading: backButton)
+    }
+    
+    var backButton: some View {
+        Button(action: {
+            self.presentationMode.wrappedValue.dismiss()
+        }, label: {
+            HStack {
+                Image(systemName: "chevron.left")
+                Text("Back")
+            }
+        })
     }
 }
+
+
 
 //struct SearchView_Previews: PreviewProvider {
 //    static var previews: some View {
